@@ -1,69 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Gopika D</title>
+  <meta name="description"
+    content="Portfolio of Gopika D - Freelance Web Developer specializing in clean, responsive, and modern websites.">
+  <title>Gopika D | Freelance Web Developer</title>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <h1>Gopika D</h1>
-    <span class="menu-toggle">&#9776;</span>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+
+  <!-- Header / Navigation -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-text">Gopika D</span><span class="logo-dot">.</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certificates" class="nav-link">Certificates</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-sm btn-teal nav-cta">Let's Talk</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      Hi, I am <strong>Gopika D</strong>. Welcome to my portfolio!  
-      I am passionate about technology, continuous learning, and applying my skills 
-      in real-world projects. My focus areas include AI, Data Science, and Web Development.
-    </p>
-  </section>
+  <!-- Backdrop overlay for mobile menu -->
+  <div class="menu-overlay" id="menuOverlay"></div>
 
-  <!-- Certificates Section -->
-  <section id="certificates" class="certificates">
-    <h2>Certificates</h2>
-    <ul>
-      <li>Artificial Intelligence - IBM SkillsBuild</li>
-      <li>Data Science Fundamentals</li>
-      <li>Web Development Basics</li>
-    </ul>
-  </section>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-glow"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="status-indicator"></span>
+          <span>Available for Freelance Projects</span>
+        </div>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Python</span>
-      <span>AI/ML</span>
-      <span>Data Science</span>
+        <h1 class="hero-title">
+          Building Fast, Modern &amp; <span class="highlight-teal">Responsive</span> Web Experiences
+        </h1>
+
+        <p class="hero-subtitle">
+          Hi, I am <strong>Gopika D</strong> — a passionate web developer focused on crafting clean, accessible, and
+          high-performance websites. I help clients turn ideas into professional, user-friendly digital solutions.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+
+        <div class="hero-features">
+          <div class="hero-feature-item">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <div>
+              <strong>Responsive Design</strong>
+              <p>Flawless on all screens</p>
+            </div>
+          </div>
+
+          <div class="hero-feature-item">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <div>
+              <strong>Clean Code</strong>
+              <p>Semantic &amp; performant</p>
+            </div>
+          </div>
+
+          <div class="hero-feature-item">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <div>
+              <strong>Client Focused</strong>
+              <p>Reliable project delivery</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2>Committed to Continuous Learning &amp; Web Quality</h2>
+          <div class="header-divider"></div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-main">
+            <p class="lead-text">
+              Hi, I am <strong>Gopika D</strong>. Welcome to my portfolio!
+            </p>
+            <p>
+              I am passionate about technology, continuous learning, and applying my skills in real-world projects. My
+              focus areas include <strong>Web Development</strong>, <strong>AI</strong>, and <strong>Data
+                Science</strong>.
+            </p>
+            <p>
+              As a freelance web developer, my objective is to deliver polished, dependable websites tailored to client
+              needs. Whether developing responsive web interfaces, optimizing page usability, or collaborating on
+              technical solutions, I prioritize attention to detail, modern standards, and client satisfaction.
+            </p>
+
+            <div class="about-values-grid">
+              <div class="value-item">
+                <span class="value-check">&#10003;</span>
+                <div>
+                  <strong>Modern Standards</strong>
+                  <p>Up-to-date HTML5, CSS3, and JavaScript best practices.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-check">&#10003;</span>
+                <div>
+                  <strong>Mobile-First Approach</strong>
+                  <p>Designed to provide an optimal experience on phones, tablets, and desktops.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-check">&#10003;</span>
+                <div>
+                  <strong>Data &amp; AI Driven</strong>
+                  <p>Analytical mindset informed by Data Science and AI concepts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Competencies</span>
+          <h2>Technical Skills</h2>
+          <p class="section-subtitle">Technologies and tools I leverage to build functional digital applications.</p>
+          <div class="header-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 3h16l-1.5 14L12 21l-6.5-4z"></path>
+              </svg>
+            </div>
+            <div class="skill-info">
+              <h3>HTML</h3>
+              <p>Semantic markup, accessible structure, SEO fundamentals, and clean document outlines.</p>
+            </div>
+            <span class="skill-badge">Frontend</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div class="skill-info">
+              <h3>CSS</h3>
+              <p>Responsive design, Flexbox, Grid, transitions, modern layouts, and cross-browser styling.</p>
+            </div>
+            <span class="skill-badge">Styling</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <div class="skill-info">
+              <h3>JavaScript</h3>
+              <p>Dynamic user interactions, DOM manipulation, responsive menus, and clean logic.</p>
+            </div>
+            <span class="skill-badge">Programming</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div class="skill-info">
+              <h3>Python</h3>
+              <p>General programming, algorithmic problem solving, scripting, and backend fundamentals.</p>
+            </div>
+            <span class="skill-badge">Development</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V11h-4V9.5C8.8 8.8 8 7.5 8 6a4 4 0 0 1 4-4z"></path>
+                <path d="M9 18h6"></path>
+                <path d="M10 22h4"></path>
+                <path d="M12 11v3"></path>
+              </svg>
+            </div>
+            <div class="skill-info">
+              <h3>AI/ML</h3>
+              <p>Core artificial intelligence models, machine learning concepts, and modern AI workflows.</p>
+            </div>
+            <span class="skill-badge">Intelligence</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <div class="skill-info">
+              <h3>Data Science</h3>
+              <p>Data analysis, exploratory processing, pattern identification, and analytical reasoning.</p>
+            </div>
+            <span class="skill-badge">Analytics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2>My Projects</h2>
+          <p class="section-subtitle">Real-world applications and web solutions built with modern technology stacks.</p>
+          <div class="header-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: AI Powered Faculty Workload Management -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-category-badge">Full-Stack &amp; AI</span>
+              <span class="project-type-indicator">Web Application</span>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">AI Powered Faculty Workload Management and Student Analytics System</h3>
+              <p class="project-desc">
+                A centralized academic management and analytics platform designed to eliminate repetitive manual
+                administrative paperwork. Features automated period-wise attendance tracking, multi-exam marks
+                recording, automated faculty teaching workload distribution, and student academic performance analytics
+                to identify learning gaps early.
+              </p>
+
+              <div class="project-features">
+                <span class="feature-tag">Role-Based Access</span>
+                <span class="feature-tag">Period Attendance &amp; Alerts</span>
+                <span class="feature-tag">Teaching Workload Calculation</span>
+                <span class="feature-tag">Student Analytics &amp; Risk Insights</span>
+                <span class="feature-tag">PDF &amp; Excel Reports</span>
+              </div>
+            </div>
+
+            <div class="project-tech-wrapper">
+              <span class="tech-label">Technologies Used:</span>
+              <div class="tech-tags">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Flask</span>
+                <span class="tech-pill">React.js</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Pandas</span>
+                <span class="tech-pill">Scikit-learn</span>
+                <span class="tech-pill">REST APIs</span>
+                <span class="tech-pill">CSS</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <span class="project-status">
+                <span class="status-dot"></span>
+                <span>Academic Full-Stack Project</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Project 2: Portfolio Website -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-category-badge">Frontend Development</span>
+              <span class="project-type-indicator">Live Website</span>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">
+                A clean, modern, and high-performance personal portfolio website built to showcase technical skills,
+                credentials, and freelance web development capabilities. Engineered from scratch with pure semantic
+                HTML5, modern vanilla CSS, and accessible JavaScript for instant loading and fluid responsiveness across
+                desktop, tablet, and mobile devices.
+              </p>
+
+              <div class="project-features">
+                <span class="feature-tag">Navy, White &amp; Teal Theme</span>
+                <span class="feature-tag">100% Mobile Responsive</span>
+                <span class="feature-tag">Accessible Navigation Drawer</span>
+                <span class="feature-tag">Zero External Framework Overhead</span>
+                <span class="feature-tag">Validated Contact Form Interface</span>
+              </div>
+            </div>
+
+            <div class="project-tech-wrapper">
+              <span class="tech-label">Technologies Used:</span>
+              <div class="tech-tags">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">Vanilla CSS3</span>
+                <span class="tech-pill">JavaScript (ES6+)</span>
+                <span class="tech-pill">Responsive Design</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="#hero" class="project-link-badge">
+                <span class="status-dot active"></span>
+                <span>Currently Viewing (Live)</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Credentials</span>
+          <h2>Certificates &amp; Training</h2>
+          <p class="section-subtitle">Verified training showcasing foundation across AI, Data Science, and Web
+            Development.</p>
+          <div class="header-divider"></div>
+        </div>
+
+        <div class="certificates-grid">
+          <div class="certificate-card">
+            <div class="cert-header">
+              <div class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-status-badge">Certified</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">IBM SkillsBuild</span>
+              <h3>Artificial Intelligence</h3>
+              <p>Comprehensive training covering core AI principles, practical applications, and machine learning
+                fundamentals.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-tag">AI &amp; Machine Learning</span>
+            </div>
+          </div>
+
+          <div class="certificate-card">
+            <div class="cert-header">
+              <div class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-status-badge">Completed</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Foundational Coursework</span>
+              <h3>Data Science Fundamentals</h3>
+              <p>Study of data manipulation, statistical concepts, exploratory analysis, and data-driven problem
+                solving.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-tag">Data Analysis</span>
+            </div>
+          </div>
+
+          <div class="certificate-card">
+            <div class="cert-header">
+              <div class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-status-badge">Completed</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Web Technologies</span>
+              <h3>Web Development Basics</h3>
+              <p>Hands-on foundation in modern frontend architecture, semantic HTML structure, styling, and web
+                fundamentals.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-tag">Web Development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2>Let's Discuss Your Project</h2>
+          <p class="section-subtitle">Looking for a freelance web developer for your next website or landing page? Drop
+            a message below.</p>
+          <div class="header-divider"></div>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info-card">
+            <h3>Start a Conversation</h3>
+            <p>I am open to freelance web development opportunities, website build requests, and technical
+              collaborations.</p>
+
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="detail-label">Direct Inquiries</span>
+                  <p class="detail-value">Available via Contact Form</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="detail-label">Response Time</span>
+                  <p class="detail-value">Within 24 to 48 hours</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="detail-label">Availability</span>
+                  <p class="detail-value">Freelance &amp; Remote Contracts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Sarah Jenkins" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="e.g. sarah@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="projectType">Project Type (Optional)</label>
+                <input type="text" id="projectType" name="projectType"
+                  placeholder="e.g. Landing Page, Website Redesign, Frontend UI">
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5"
+                  placeholder="Describe your project, goals, or requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-arrow-icon">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+              <div id="formNotice" class="form-notice" style="display: none;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-text">Gopika D</span><span class="logo-dot">.</span>
+        </a>
+        <p>Freelance Web Developer focused on building clean, responsive, and effective websites.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Gopika D. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
